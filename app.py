@@ -1,6 +1,6 @@
 import streamlit as st
 st.title("Galeriq ot igri")
-if "igri" not in st.session_state:
+if "games" not in st.session_state:
   st.session_state.games = []
 
 st.header("Dobavi nova igra")
