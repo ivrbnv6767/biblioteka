@@ -36,7 +36,7 @@ if st.session_state.igri:
     with cols[idx % 3]:
       st.subheader(igra["ime"])
       st.image(igra["kartina"],use_colums_width=True)
-      st.write(igra["opisanie"]
+      st.write(igra["opisanie"])
 else:
       st.info("Galeriqta e prazna. Dobavi igra!")
       
