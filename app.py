@@ -20,6 +20,9 @@ if st.button ("dobavi"):
 
 
 if st.session_state.games:
+  st.header("Premahni igra")
+  name=[]
+  for a in st.session_state.games:
   name.append(a["ime"])
 
 remove_name = st.selectbox("Premahni igra",name)
