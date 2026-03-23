@@ -1,7 +1,7 @@
 import streamlit as st
 st.title("Galeriq ot igri")
 if "igri" not in st.session_state:
-  st.session_state.igri = []
+  st.session_state.games = []
 
 st.header("Dobavi nova igra")
 name = st.text_input("ime na igra")
@@ -10,7 +10,7 @@ image_url = st.text_input("URL na kartinka")
 
 if st.button ("dobavi"):
   if name and description and image_url:
-    st.session_state.igri.appened({
+    st.session_state.games.appened({
       "ime" : name,
       "opisanie" : description,
       "kartinka" : image_url
@@ -19,20 +19,20 @@ if st.button ("dobavi"):
     st.warning("Populnete vsichki poleta")
 
 
-if st.session_state.igri:
+if st.session_state.games:
   names.appened(a["ime"])
 
 remove_name = st.selectbox("Premahni igra")
 if st.button("Premahni"):
-  for a in st.session_state.igri:
+  for a in st.session_state.games:
     if a["ime"] == remove_name:
-      st.session_state.igri.remove(a)
+      st.session_state.games.remove(a)
       break
 
 st.header("Galeriq")
-if st.session_state.igri:
+if st.session_state.games:
   cols = st.colums(3)
-  for idx, igra in enumerate(st.session_state.igri):
+  for idx, igra in enumerate(st.session_state.games):
     with cols[idx % 3]:
       st.subheader(igra["ime"])
       st.image(igra["kartina"],use_colums_width=True)
