@@ -22,7 +22,7 @@ if st.button ("dobavi"):
 if st.session_state.games:
   names.appened(a["ime"])
 
-remove_name = st.selectbox("Premahni igra")
+remove_name = st.selectbox("Premahni igra",name)
 if st.button("Premahni"):
   for a in st.session_state.games:
     if a["ime"] == remove_name:
