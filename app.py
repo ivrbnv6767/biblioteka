@@ -10,7 +10,7 @@ image_url = st.text_input("URL na kartinka")
 
 if st.button ("dobavi"):
   if name and description and image_url:
-    st.session_state.games.appened({
+    st.session_state.games.append({
       "ime" : name,
       "opisanie" : description,
       "kartinka" : image_url
