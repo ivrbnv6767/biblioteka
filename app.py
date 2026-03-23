@@ -32,15 +32,6 @@ if st.button("Premahni"):
       st.session_state.games.remove(a)
       break
 
-st.header("Galeriq")
-if st.session_state.games:
-  cols = st.colums(3)
-  for idx, igra in enumerate(st.session_state.games):
-    with cols[idx % 3]:
-      st.subheader(igra["ime"])
-      st.image(igra["kartina"],use_colums_width=True)
-      st.write(igra["opisanie"])
-else:
-      st.info("Galeriqta e prazna. Dobavi igra!")
+
       
 
