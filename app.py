@@ -32,6 +32,6 @@ if st.button("Premahni"):
       st.session_state.games.remove(a)
       break
 
-
+is st.session_state.games
       
 
